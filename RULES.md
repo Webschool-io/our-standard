@@ -1,9 +1,31 @@
-# JavaScript Standard Style
+# OUR JavaScript Standard Style
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-This is a TL;DR of the [standard](https://github.com/feross/standard) JavaScript
+This is a TL;DR of the [standard](https://github.com/feross/standard) **modified** JavaScript
 rules.
+
+We create this fork of [standard](https://github.com/feross/standard) because **we HATE** this:
+
+  ```js=
+  if (condition) {
+    // ...
+  } else {
+    // ...
+  }
+  ```
+
+So for **us** will be this:
+
+  ```js
+  // ✗ OK
+  if (condition) {
+    // ...
+  }
+  else {
+    // ...
+  }
+  ```
 
 The best way to learn about `standard` is to just install it and give it a try on
 your code.
@@ -94,16 +116,7 @@ your code.
 * **Keep else statements** on the same line as their curly braces.
 
   ```js
-  // ✓ ok
-  if (condition) {
-    // ...
-  } else {
-    // ...
-  }
-  ```
-
-  ```js
-  // ✗ avoid
+  // ✓ OK
   if (condition) {
     // ...
   }
@@ -111,6 +124,16 @@ your code.
     // ...
   }
   ```
+  
+  ```js
+  // ✗ avoid
+  if (condition) {
+    // ...
+  } else {
+    // ...
+  }
+  ```
+
 
 * **For multi-line if statements,** use curly braces.
 
